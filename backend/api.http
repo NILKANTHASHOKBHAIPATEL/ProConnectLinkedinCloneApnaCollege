@@ -1,0 +1,66 @@
+POST http://localhost:9090/register 
+Content-Type: application/json
+
+{
+    "username":"rahul456",
+    "password":"abc",
+    "email":"rahul@gmail.com",
+    "name":"Rahul kumar"
+}
+
+###
+
+POST http://localhost:9090/login 
+Content-Type: application/json
+
+{
+    "password":"123456",
+    "email":"nilkanth@gmail.com"
+}
+
+###
+
+POST http://localhost:9090/login 
+Content-Type: application/json
+
+{
+    "password":"abc",
+    "email":"rahul@gmail.com"
+}
+
+###
+
+GET  http://localhost:9090/get_user_and_profile 
+Content-Type: application/json
+
+{
+    "token":"cf5c4c5ad85206464239e5cb75e8825c458290ccc9ffd3ff81ced1fbe5cd9763"
+}
+
+###
+
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+    "token":"130ff65b9ee79cb3a97e2b847d36c7075b83f1f2e09669e40f9e33ca54f3d1c9",
+    "bio":"Hey,I am Nilkanth,Experienced technology leader with a demonstrated history of working in the information technology and services industry.",
+    "currentPost":"CTO",
+    "pastWork":[
+        {
+            "company":"Microsoft",
+            "position":"CTO",
+            "years":"2+"
+        }
+    ],
+    "education":[
+        {
+            "school":"IIT",
+            "degree":"B.Tech",
+            "fieldOfStudy":"2015-2019"
+        }
+    ]
+}
+
+###
+GET http://localhost:9090/user/get_all_users
